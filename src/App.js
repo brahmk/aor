@@ -1,23 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+import "./App.css";
+import Chat from "./components/Chat";
+import MessageList from "./components/MessageList";
+import useSound from "use-sound";
+import welcome from "./Welcome.mp3";
 
 function App() {
+  const [messages, setMessages] = useState([]);
+  const [welcomeSound] = useSound(welcome, { volume: 1.0 });
+
+  useEffect(() => {
+    fetch("https://chat-app-api-bk.web.app/messages")
+      .then((res) => res.json())
+      .then(setMessages)
+
+      .catch(console.error);
+  }, [messages]);
+
+  // useEffect(() => {
+  //   welcomeSound();
+  // }, []);
+
+  useEffect(welcomeSound, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="scrollbox">
+        <MessageList messages={messages} />
+      </div>
+      {/* <div className="chat-input"> */}
+      <Chat />
+      {/* </div> */}
     </div>
   );
 }
