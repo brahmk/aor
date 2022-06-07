@@ -28,10 +28,9 @@ export default function MessageList({ messages }) {
               <p className="msgbox" key={id}>
                 <span className="screen-name">limpBizkit427:</span> {message}
               </p>
-              {/* <p>
-                <span className="screen-name2">skate_or_d1e:</span>{" "}
-                {randomIm(imArray)}{" "}
-              </p> */}
+              <p>
+                <span className="screen-name2">sk8_0r_d1e:</span> lol{" "}
+              </p>{" "}
             </div>
           );
         })}
