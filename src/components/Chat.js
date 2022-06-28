@@ -7,7 +7,6 @@ import "../App.css";
 
 export default function Chat() {
   const [newMessage, setNewMessage] = useState({ message: "" });
-  //const [timestamp, setTimestamp] = useState({ timestamp: "" });
 
   const [playSound] = useSound(im, { volume: 1.0 });
 
