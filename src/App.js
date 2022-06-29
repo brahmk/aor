@@ -25,10 +25,11 @@ function App() {
 
   return (
     <div className="App">
-      <div className="scrollbox">
+      <div className="window">
         <MessageList messages={messages} />
+
+        <Chat />
       </div>
-      <Chat />
     </div>
   );
 }
