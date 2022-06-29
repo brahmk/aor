@@ -17,6 +17,11 @@ function App() {
       .catch(console.error);
   }, [messages]);
 
+  useEffect(() => {
+    document.querySelector(".scrollbox").scrollTop =
+      document.querySelector(".scrollbox").scrollHeight;
+  }, [messages]);
+
   // useEffect(() => {
   //   welcomeSound();
   // }, []);
@@ -27,7 +32,6 @@ function App() {
     <div className="App">
       <div className="window">
         <MessageList messages={messages} />
-
         <Chat />
       </div>
     </div>
