@@ -34,6 +34,7 @@ export default function Chat() {
       <form className="chat-input" onSubmit={handleSubmit}>
         <input
           name="messageBox"
+          autoFocus="autofocus"
           value={newMessage.message}
           onChange={handleChange}
           className="message-input"

@@ -34,13 +34,13 @@
 .scrollbox {
   display: flex;
   flex-direction: column;
-  margin-top: 14%;
+  margin-top: 15%;
   margin-left: 3%;
   color: black;
   font-size: 18px;
   font-weight: 700;
   height: 35%;
-  width: 97%;
+  width: 94%;
 
   overflow-y: scroll;
   position: absolute;
