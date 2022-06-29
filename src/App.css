@@ -27,10 +27,8 @@
   display: inline-flex;
   flex-wrap: wrap;
   flex-direction: column;
-  width: 40%;
-  height: 60%;
-  min-width: 40%;
-  min-height: 60%;
+  width: 547px;
+  height: 456px;
 }
 
 .scrollbox {
@@ -42,29 +40,27 @@
   font-size: 18px;
   font-weight: 700;
   height: 35%;
-  width: 92%;
-  background-color: darkorange;
-  opacity: 0.3;
+  width: 97%;
+
   overflow-y: scroll;
-  position: relative;
+  position: absolute;
 }
 
 .chat-input {
-  position: relative;
+  position: absolute;
   margin-left: 3%;
-  height: 15%;
+  height: 10%;
   width: 95%;
   color: black;
   border: none;
-  margin-top: 2%;
+  margin-top: 53%;
 }
 
 .message-input {
   font-family: "Tino";
   box-sizing: content-box;
   position: relative;
-  background-color: blueviolet;
-  opacity: 0.4;
+
   height: 90%;
   width: 95%;
 }
@@ -76,6 +72,9 @@ input {
 }
 .send-button {
   z-index: 10;
+  margin-top: 10%;
+  margin-left: 88%;
+  opacity: 0.01;
   background-color: darkolivegreen;
 }
 
