@@ -47,25 +47,3 @@ export default function Chat() {
     </>
   );
 }
-
-//   return (
-//     <>
-//       <p></p>
-//       <Form className="chat-input" onSubmit={handleSubmit}>
-//         <Form.Item
-//           name="messageBox"
-//           value={newMessage.message}
-//           onChange={handleChange}
-//           rules={[{ required: true, message: "enter a message" }]}
-//         >
-//           <Input className="message-input"></Input>
-//         </Form.Item>
-//         <Form.Item>
-//           <Button type="primary" onClick={handleSubmit} htmlType="submit">
-//             send
-//           </Button>
-//         </Form.Item>
-//       </Form>
-//     </>
-//   );
-// }

@@ -28,9 +28,7 @@ function App() {
       <div className="scrollbox">
         <MessageList messages={messages} />
       </div>
-      {/* <div className="chat-input"> */}
       <Chat />
-      {/* </div> */}
     </div>
   );
 }
