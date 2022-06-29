@@ -2,7 +2,7 @@
 
 .App {
   background-repeat: no-repeat;
-  background-image: url(./aorbg2.png);
+  background-image: url(./homescreen.png);
   height: 100vh;
   width: 100vw;
   background-size: cover;
@@ -17,37 +17,52 @@
   border-radius: 0%;
 }
 
+.window {
+  background-image: url(./im-window.png);
+  background-repeat: no-repeat;
+  margin-left: 22%;
+  margin-top: 20%;
+  background-size: contain;
+  position: absolute;
+  display: inline-flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 547px;
+  height: 456px;
+}
+
 .scrollbox {
   display: flex;
   flex-direction: column;
-  top: 349px;
-  left: 340px;
+  margin-top: 15%;
+  margin-left: 3%;
   color: black;
   font-size: 18px;
   font-weight: 700;
-  height: 159px;
-  width: 509px;
+  height: 35%;
+  width: 94%;
+
   overflow-y: scroll;
-  position: relative;
+  position: absolute;
 }
 
 .chat-input {
-  position: relative;
-  top: 379px;
-  left: 337px;
-  height: 64px;
-  width: 515px;
+  position: absolute;
+  margin-left: 3%;
+  height: 10%;
+  width: 95%;
   color: black;
   border: none;
+  margin-top: 53%;
 }
 
 .message-input {
   font-family: "Tino";
   box-sizing: content-box;
-  position: absolute;
+  position: relative;
 
-  height: 60px;
-  width: 510px;
+  height: 90%;
+  width: 95%;
 }
 
 input {
@@ -57,6 +72,9 @@ input {
 }
 .send-button {
   z-index: 10;
+  margin-top: 10%;
+  margin-left: 88%;
+  opacity: 0.01;
   background-color: darkolivegreen;
 }
 
