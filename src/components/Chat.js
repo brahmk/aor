@@ -3,9 +3,8 @@ import useSound from "use-sound";
 import im from "../imsend.wav";
 
 import "../App.css";
-//import { datetimeString } from "firebase-tools/lib/utils";
 
-export default function Chat() {
+export default function Chat({ setMessages }) {
   const [newMessage, setNewMessage] = useState({ message: "" });
 
   const [playSound] = useSound(im, { volume: 1.0 });
@@ -13,13 +12,15 @@ export default function Chat() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    fetch("https://chat-app-api-bk.web.app/messages/post", {
+    fetch("http://localhost:5050/messages/post", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(newMessage),
     })
+      .then((res) => res.json())
+      .then(setMessages)
       .then(setNewMessage({ message: "" }), playSound())
       .catch(console.error);
   };
