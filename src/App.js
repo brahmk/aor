@@ -7,17 +7,20 @@ import welcome from "./Welcome.mp3";
 
 function App() {
   const [messages, setMessages] = useState([]);
+  const [refresh, setRefresh] = useState(false);
   const [welcomeSound] = useSound(welcome, { volume: 1.0 });
 
   useEffect(() => {
-    fetch("https://chat-app-api-bk.web.app/messages")
+    fetch("http://localhost:5050/messages")
       .then((res) => res.json())
       .then(setMessages)
+      .then(console.log("FETTTCHHH"))
 
       .catch(console.error);
-  }, [messages]);
+  }, []);
 
   useEffect(() => {
+    console.log("scroll effect!");
     document.querySelector(".scrollbox").scrollTop =
       document.querySelector(".scrollbox").scrollHeight;
   }, [messages]);
@@ -32,7 +35,7 @@ function App() {
     <div className="App">
       <div className="window">
         <MessageList messages={messages} />
-        <Chat />
+        <Chat setMessages={setMessages} />
       </div>
     </div>
   );
